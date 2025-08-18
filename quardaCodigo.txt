@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio Lucrativo - Transforme sua Arte em um Negócio de Sucesso</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Teko:wght@600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ====================
+         SEÇÃO HERÓI
+    ===================== -->
+    <header class="hero">
+        <div class="container">
+            <h1 class="hero-title">Sua Arte Não Paga as Contas?</h1>
+            <p class="hero-subtitle">Descubra o método passo a passo para transformar seu talento com tatuagens em um negócio altamente lucrativo, mesmo que você odeie vender.</p>
+            <a href="https://pay.hotmart.com/I101068055X?checkoutMode=10" class="cta-button">QUERO LUCRAR COM MINHA ARTE</a>
+            <span class="cta-subtext">Vagas limitadas! Garanta a sua com preço especial.</span>
+        </div>
+    </header>
+
+    <main>
+        <!-- ====================
+             SEÇÃO SOBRE O MENTOR
+        ===================== -->
+        <section class="about">
+            <div class="container about-container">
+                <img src="/img/400x400_mentor.png" 
+                     onerror="this.onerror=null;this.src='https://placehold.co/400x400/1a1a1a/ffffff?text=Sua+Foto';"
+                     alt="Foto do Mentor do Curso" class="mentor-photo">
+                <div class="about-text">
+                    <h2 class="section-title">QUEM VAI TE GUIAR NESSA JORNADA?</h2>
+                    <p>Olá, eu sou Otto Mendes. Com mais de <strong>12 anos de experiência</strong>, saí de um estúdio improvisado no meu quarto para um dos maiores e mais lucrativos estúdios de tatuagem da cidade. Eu sei exatamente o que é ter talento de sobra, mas ver o dinheiro não entrar no fim do mês.</p>
+                    <p>Depois de muito estudo e testes, criei um método que não só dobrou meu faturamento, mas me deu liberdade financeira e tempo para focar no que eu amo: a arte. Agora, meu objetivo é te entregar o atalho e te ajudar a alcançar o mesmo sucesso.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================
+             SEÇÃO DO CURSO
+        ===================== -->
+        <section class="course">
+            <div class="container">
+                <h2 class="section-title">O QUE VOCÊ VAI DOMINAR NO <span class="highlight">TATTOO PRO LUCRATIVO</span>?</h2>
+                <div class="modules">
+                    <div class="module">
+                        <h3>Módulo 1: Precificação de Elite</h3>
+                        <p>Chega de cobrar por hora. Aprenda a precificar sua arte pelo valor que ela realmente tem, sem medo de perder clientes.</p>
+                    </div>
+                    <div class="module">
+                        <h3>Módulo 2: Marketing que Atrai Clientes Premium</h3>
+                        <p>Domine o Instagram e outras redes para atrair clientes que não pedem desconto e valorizam seu trabalho como artista.</p>
+                    </div>
+                    <div class="module">
+                        <h3>Módulo 3: Gestão Financeira para Artistas</h3>
+                        <p>Um guia simples para você organizar as finanças do seu estúdio, separar o dinheiro pessoal do profissional e ver o lucro de verdade.</p>
+                    </div>
+                     <div class="module">
+                        <h3>Módulo 4: A Experiência que Fideliza</h3>
+                        <p>Aprenda a criar uma experiência tão incrível que seus clientes não só voltarão, mas trarão os amigos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================
+             SEÇÃO DE DEPOIMENTOS
+        ===================== -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">ARTISTAS QUE JÁ TRANSFORMARAM SEUS NEGÓCIOS</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial">
+                        <p>"Pensei que sabia tudo sobre tatuagem, mas nada sobre negócios. O curso abriu minha mente. Dobrei meu faturamento em 3 meses!"</p>
+                        <div class="author">
+                            <img src="https://placehold.co/100x100/1a1a1a/ffffff?text=Aluno" alt="Foto Aluno 1">
+                            <span>- Bruno L., São Paulo</span>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"O módulo de precificação sozinho já valeu o investimento. Finalmente tenho confiança para cobrar o valor justo pelo meu trabalho."</p>
+                         <div class="author">
+                            <img src="https://placehold.co/100x100/1a1a1a/ffffff?text=Aluna" alt="Foto Aluna 2">
+                            <span>- Carla S., Rio de Janeiro</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================
+             SEÇÃO DE CTA FINAL
+        ===================== -->
+        <section class="final-cta">
+            <div class="container">
+                <h2 class="section-title">Pronto para Viver da sua Arte com Conforto e Segurança?</h2>
+                <p>Essa é a sua chance de ter acesso ao método completo que vai transformar sua paixão em um negócio lucrativo. As vagas são limitadas para garantir um suporte de qualidade.</p>
+                <a href="[SEU_LINK_DE_CHECKOUT_DA_HOTMART]" class="cta-button">SIM, QUERO GARANTIR MINHA VAGA AGORA!</a>
+                <div class="guarantee">
+                    <img src="https://placehold.co/100x100/1a1a1a/FFA500?text=7" alt="Selo de Garantia de 7 dias" class="guarantee-seal">
+                    <p><strong>Garantia Incondicional de 7 Dias.</strong><br>Seu risco é zero. Se não gostar, peça seu dinheiro de volta. Simples assim.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================
+             SEÇÃO DE FAQ
+        ===================== -->
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title">AINDA TEM DÚVIDAS?</h2>
+                <div class="faq-item">
+                    <h3 class="faq-question">Para quem é este curso?</h3>
+                    <div class="faq-answer">
+                        <p>Este curso é para tatuadores que já dominam a técnica, mas sentem que a parte de negócios e finanças está impedindo seu crescimento. Se você quer atrair mais clientes, cobrar mais caro e ter um negócio organizado, ele é para você.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Por quanto tempo terei acesso?</h3>
+                    <div class="faq-answer">
+                        <p>O acesso é vitalício! Você pode ver e rever as aulas quantas vezes quiser, no seu ritmo, e ainda terá acesso a todas as futuras atualizações sem custo adicional.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Como funciona a garantia?</h3>
+                    <div class="faq-answer">
+                        <p>Você tem 7 dias para explorar todo o conteúdo do curso. Se por qualquer motivo achar que não é para você, basta enviar um email e nós devolveremos 100% do seu investimento, sem perguntas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ====================
+         RODAPÉ
+    ===================== -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Estudio Lucrativo. Todos os direitos reservados.</p> 
+            <p>&copy; Desenvolvido por André Guaraci.</p>           
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+old css
+/* --- RESET BÁSICO E VARIÁVEIS DE COR --- */
+:root {
+    --black: #0D0D0D;
+    --dark-gray: #1a1a1a;
+    --orange: #FF4500; /* Laranja Vívido */
+    --light-orange: #FF6347;
+    --white: #F5F5F5;
+    --text-gray: #B3B3B3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* --- ESTILOS GERAIS --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 3.5rem;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    line-height: 1.1;
+}
+
+.highlight {
+    color: var(--orange);
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-gray);
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+}
+
+/* --- BOTÃO DE CHAMADA PARA AÇÃO (CTA) --- */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(145deg, var(--orange), var(--light-orange));
+    color: var(--white);
+    padding: 20px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
+    border: none;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 69, 0, 0.6);
+}
+
+.cta-subtext {
+    display: block;
+    margin-top: 15px;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+/* --- SEÇÃO HERÓI --- */
+.hero {
+    /*background-color: var(--black);    
+    background-size: cover;
+    background-position: center;
+    padding: 120px 20px;
+    filter: blur(5px);
+    overflow: hidden; */
+    position: relative;   
+}
+
+.hero::before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8), url('/img/temp_bg.png?text=Imagem+de+Fundo'));
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+.hero-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 5rem;
+    color: var(--orange);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    color: var(--white);
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+/* --- SEÇÃO SOBRE --- */
+.about {
+    background-color: var(--dark-gray);
+}
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    text-align: left;
+}
+.mentor-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--orange);
+    flex-shrink: 0;
+}
+.about-text p {
+    max-width: 100%;
+}
+
+/* --- SEÇÃO CURSO --- */
+.modules {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.module {
+    background-color: var(--dark-gray);
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 5px solid var(--orange);
+    transition: transform 0.3s ease;
+}
+.module:hover {
+    transform: translateY(-10px);
+}
+.module h3 {
+    color: var(--orange);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+.module p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* --- SEÇÃO DEPOIMENTOS --- */
+.testimonials {
+    background-color: var(--dark-gray);
+}
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.testimonial {
+    background-color: var(--black);
+    padding: 30px;
+    border-radius: 8px;
+    border-top: 5px solid var(--orange);
+}
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+.author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.author span {
+    font-weight: bold;
+    color: var(--white);
+}
+
+/* --- SEÇÃO CTA FINAL --- */
+.final-cta .section-title {
+    font-size: 3rem;
+}
+.guarantee {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--dark-gray);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.guarantee-seal {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid var(--orange);
+}
+.guarantee p {
+    margin: 0;
+    text-align: left;
+    color: var(--white);
+    font-size: 1rem;
+}
+
+/* --- SEÇÃO FAQ --- */
+.faq {
+    background-color: var(--dark-gray);
+}
+.faq-item {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    background-color: var(--black);
+    border-radius: 8px;
+    text-align: left;
+}
+.faq-question {
+    padding: 20px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    position: relative;
+}
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    font-size: 2rem;
+    color: var(--orange);
+    transition: transform 0.3s ease;
+}
+.faq-item.active .faq-question::after {
+    transform: rotate(45deg);
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+.faq-answer p {
+    padding: 0 20px 20px 20px;
+    margin: 0;
+}
+
+/* --- RODAPÉ --- */
+footer {
+    background-color: var(--black);
+    padding: 30px 20px;
+    border-top: 1px solid var(--dark-gray);
+}
+footer p {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin-bottom: 5px;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 992px) {
+    .about-container {
+        flex-direction: column;
+    }
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title { font-size: 2.5rem; }
+    .hero-title { font-size: 3.5rem; }
+    .hero-subtitle { font-size: 1.2rem; }
+    .about-container { gap: 30px; }
+    .mentor-photo { width: 200px; height: 200px; }
+}
