@@ -102,6 +102,95 @@ p {
     max-width: 800px;
     margin-bottom: 40px;
 }
+/* --- SEÇÃO SOBRE O MENTOR --- */
+.about {
+    background-color: var(--black);
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 5%; /* Espaçamento entre a galeria e o texto */
+    text-align: left;
+}
+
+.about-text {
+    flex-basis: 55%; /* O texto ocupa 55% do espaço */
+}
+
+.about-text .section-title {
+    text-align: left;
+    font-size: 4.5rem; /* Aumenta o tamanho da fonte do título */
+    line-height: 1;
+}
+
+.about-text p {
+    color: var(--text-gray);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+/* ESTILOS DA GALERIA CIRCULAR DO MENTOR */
+.mentor-gallery-circular {
+    flex-basis: 40%; /* A galeria ocupa 40% */
+    position: relative;
+    width: 400px; /* Tamanho base */
+    height: 400px;
+    margin: 0 auto;
+}
+
+.mentor-gallery-circular img {
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.main-mentor-photo {
+    width: 380px;
+    height: 380px;
+    border: 5px solid var(--orange);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.support-photo {
+    width: 100px;
+    height: 100px;
+    border: 3px solid var(--orange);
+    z-index: 1;
+}
+
+/* Posicionamento das fotos de suporte */
+.photo1 { top: -21%; left: 20%; }
+.photo2 { top: 2%; left: -10%; }
+.photo3 { top: 40%; left: -20%; }
+.photo4 { bottom: 0%; left: -10%; }
+.photo5 { bottom: -20%; right: 60%; }
+
+
+/* --- RESPONSIVIDADE PARA A SECÇÃO DO MENTOR --- */
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-text .section-title {
+        text-align: center;
+        margin-top: 40px; /* Adiciona espaço quando empilha */
+    }
+    .mentor-gallery-circular {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-text .section-title { font-size: 3.5rem; }
+}
+
 
 /* --- SEÇÃO SOBRE --- */
 .about {
