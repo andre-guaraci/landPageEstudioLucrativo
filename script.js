@@ -58,8 +58,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Chama a função para carregar os produtos
     carregarProdutos();
-});
+    });
+    
+    // Espera que todo o conteúdo da página seja carregado antes de executar o script
+    document.addEventListener('DOMContentLoaded', function () {
+        const testimonialSwiper = new Swiper('.testimonial-swiper', {
+            // Parâmetros opcionais
+            loop: true, // Cria um loop infinito no carrossel
+            autoplay: {
+                delay: 5000, // Muda de slide a cada 5 segundos
+                disableOnInteraction: false, // Não para o autoplay quando o usuário interage
+            },
 
+            // Paginação (as bolinhas inferiores)
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true, // Permite clicar nas bolinhas para navegar
+            },
+
+            // Setas de navegação
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    });
 
 // Lógica para o Acordeão do FAQ
 
