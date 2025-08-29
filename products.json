@@ -1,0 +1,30 @@
+[
+    {
+        "id": "1",
+        "nome": "Tattoo Pro: Iniciação",
+        "descricao": "O curso completo para quem quer começar do zero e se tornar um tatuador profissional.",
+        "imagem": "https://placehold.co/600x400/1a1a1a/FFA500?text=Curso+1",
+        "link": "[SEU_LINK_HOTMART_PRODUTO_1]"
+    },
+    {
+        "id": "2",
+        "nome": "Fineliner Avançado",
+        "descricao": "Domine a arte dos traços finos e delicados para tatuagens minimalistas e detalhadas.",
+        "imagem": "https://placehold.co/600x400/1a1a1a/FFA500?text=Curso+2",
+        "link": "[SEU_LINK_HOTMART_PRODUTO_2]"
+    },
+    {
+        "id": "3",
+        "nome": "Marketing para Tatuadores",
+        "descricao": "Aprenda a lotar sua agenda atraindo clientes premium que valorizam sua arte.",
+        "imagem": "https://placehold.co/600x400/1a1a1a/FFA500?text=Curso+3",
+        "link": "[SEU_LINK_HOTMART_PRODUTO_3]"
+    },
+    {
+        "id": "4",
+        "nome": "Gestão de Estúdio",
+        "descricao": "Transforme seu estúdio em um negócio lucrativo com gestão financeira e de equipe.",
+        "imagem": "https://placehold.co/600x400/1a1a1a/FFA500?text=Curso+4",
+        "link": "[SEU_LINK_HOTMART_PRODUTO_4]"
+    }
+]

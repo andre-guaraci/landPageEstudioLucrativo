@@ -125,6 +125,79 @@ p {
     max-width: 100%;
 }
 
+.products {
+    background-color: var(--black);
+}
+
+.product-carousel {
+    width: 100%;
+    padding: 20px 0 40px 0; /* Espaço para as setas */
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-card {
+    background-color: var(--dark-gray);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 320px;
+    text-align: center;
+    border-top: 5px solid var(--orange);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.8rem;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    min-height: 50px; /* Garante alinhamento */
+}
+
+.product-link {
+    display: inline-block;
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.product-link:hover {
+    background-color: var(--light-orange);
+}
+
+/* Estilização das setas do Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--orange) !important;
+}
+
 /* --- SEÇÃO CURSO --- */
 .modules {
     display: grid;

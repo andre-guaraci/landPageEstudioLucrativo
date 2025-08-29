@@ -1,90 +1,130 @@
 <?php
 /**
- * Arquivo: hotmart.php
- * Descrição: Exemplo de como fazer uma chamada à API da Hotmart para obter o token de acesso.
- * IMPORTANTE: Este é um exemplo de back-end. Para funcionar, você precisa de um ambiente com PHP (como a Hostinger).
- * Você NUNCA deve expor seu Client ID e Client Secret no front-end (HTML/JS).
+ * hotmart.php
+ * Biblioteca para autenticação e consumo da API da Hotmart
  */
+// Inclui o autoloader do Composer.
+// O caminho é '__DIR__ . '/../vendor/autoload.php'' porque 'vendor' está um nível acima
+// dos arquivos PHP dentro de public_html.
+require_once __DIR__ . '/../vendor/autoload.php';
 
-// Esconde erros para não quebrar a aplicação em produção, mas loga-os.
-ini_set('display_errors', 0);
-ini_set('log_errors', 1);
+// Carrega as variáveis de ambiente do arquivo .env
+// O caminho para o .env é '__DIR__ . '/../'' porque ele está um nível acima de public_html.
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
 
+// Agora você pode acessar suas credenciais usando $_ENV (ou getenv())
+$clientId     = $_ENV['HOTMART_CLIENT_ID'];
+$clientSecret = $_ENV['HOTMART_CLIENT_SECRET'];
+$basicToken   = $_ENV['HOTMART_BASIC_TOKEN'];
 
- // Função para obter o token de acesso da API da Hotmart.
-/*
-    @param string $clientId O seu Client ID da Hotmart.
-    @param string $clientSecret O seu Client Secret da Hotmart.
-    @param string $basicToken O seu Basic Token (geralmente base64_encode(clientId:clientSecret)).
-    @return string|null O token de acesso ou null em caso de falha.
-*/
- 
+// Verificação simples (opcional, mas boa prática)
+if (!$clientId || !$clientSecret || !$basicToken) {
+    // Isso indicaria que as variáveis de ambiente não foram carregadas.
+    // Em produção, você pode logar um erro e sair.
+    // Em desenvolvimento, pode deixar um valor default para testar rapidamente.
+    error_log("Erro: Credenciais Hotmart não carregadas das variáveis de ambiente.");
+    // Opcional: para desenvolvimento local sem .env configurado ainda
+    // $clientId     = "SEU_CLIENT_ID_LOCAL_PARA_TESTE";
+    // $clientSecret = "SEU_CLIENT_SECRET_LOCAL_PARA_TESTE";
+    // $basicToken   = "SEU_BASIC_TOKEN_LOCAL_PARA_TESTE";
+}
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+/**
+ * Obtém o token de acesso da API da Hotmart
+ */
 function getHotmartAccessToken($clientId, $clientSecret, $basicToken) {
-    // URL de autenticação da Hotmart. Mude para o endpoint de produção se necessário.
-    $authUrl = '[https://api-sec-vlc.hotmart.com/security/oauth/token](https://api-sec-vlc.hotmart.com/security/oauth/token)';
+    $authUrl = 'https://api-sec-vlc.hotmart.com/security/oauth/token';
 
-    // Parâmetros para a requisição do token.
     $params = http_build_query([
         'grant_type' => 'client_credentials',
         'client_id' => $clientId,
         'client_secret' => $clientSecret
     ]);
 
-    // Configuração do cURL
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $authUrl);
-    curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, [
-        'Content-Type: application/x-www-form-urlencoded',
-        'Authorization: Basic ' . $basicToken
+    curl_setopt_array($ch, [
+        CURLOPT_URL => $authUrl,
+        CURLOPT_POST => 1,
+        CURLOPT_POSTFIELDS => $params,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_HTTPHEADER => [
+            'Content-Type: application/x-www-form-urlencoded',
+            'Authorization: Basic ' . $basicToken
+        ],
+        CURLOPT_CONNECTTIMEOUT => 10,
+        CURLOPT_TIMEOUT => 30,
     ]);
 
-    // Executa a requisição
     $response = curl_exec($ch);
+
+    if (curl_errno($ch)) {
+        $curlError = curl_error($ch);
+        curl_close($ch);
+        trigger_error("Erro na chamada cURL: " . $curlError, E_USER_ERROR);
+        return null;
+    }
+
     $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
 
-    // Verifica se a requisição foi bem-sucedida
     if ($httpCode == 200) {
         $data = json_decode($response, true);
         return $data['access_token'] ?? null;
     } else {
-        // Em um caso real, você logaria o erro.
-        // error_log("Erro ao obter token da Hotmart: " . $response);
+        error_log("Erro ao obter token. Código $httpCode: $response");
         return null;
     }
 }
 
-
-// --- COMO USAR ---
-// 1. Obtenha suas credenciais no painel da Hotmart.
-// 2. Substitua os valores abaixo.
-
-// $clientId = 'SEU_CLIENT_ID';
-// $clientSecret = 'SEU_CLIENT_SECRET';
-// $basicToken = base64_encode($clientId . ':' . $clientSecret);
-
-// $accessToken = getHotmartAccessToken($clientId, $clientSecret, $basicToken);
-
-// if ($accessToken) {
-//     // Você pode usar este token para fazer outras chamadas à API,
-//     // como buscar informações do produto, histórico de vendas, etc.
-//     // Exemplo: header('Content-Type: application/json'); echo json_encode(['token' => $accessToken]);
-// } else {
-//     // header('Content-Type: application/json');
-//     // http_response_code(500);
-//     // echo json_encode(['error' => 'Não foi possível obter o token de acesso.']);
-// }
-
 /**
- * Para a landing page, a forma mais direta de integração é usar o Link de Pagamento (HotLink)
- * diretamente no botão de CTA, como já está no arquivo HTML.
- *
- * <a href="[SEU_LINK_DE_CHECKOUT_DA_HOTMART]" class="cta-button">...</a>
- *
- * Este script PHP serve como uma base para integrações mais avançadas que você
- * queira fazer no futuro (ex: criar uma área de membros customizada, etc.).
+ * Consulta vendas na API da Hotmart
  */
+function getHotmartSales($accessToken, $startDate = null, $endDate = null) {
+    $url = 'https://api-sec-vlc.hotmart.com/payments/api/v1/sales/history';
+
+    // Adiciona filtros (datas são opcionais)
+    $query = [];
+    if ($startDate) $query['startDate'] = $startDate;
+    if ($endDate) $query['endDate'] = $endDate;
+
+    if (!empty($query)) {
+        $url .= '?' . http_build_query($query);
+    }
+
+    $ch = curl_init();
+    curl_setopt_array($ch, [
+        CURLOPT_URL => $url,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_HTTPHEADER => [
+            'Content-Type: application/json',
+            'Authorization: Bearer ' . $accessToken
+        ],
+        CURLOPT_CONNECTTIMEOUT => 10,
+        CURLOPT_TIMEOUT => 30,
+    ]);
+
+    $response = curl_exec($ch);
+
+    if (curl_errno($ch)) {
+        $curlError = curl_error($ch);
+        curl_close($ch);
+        trigger_error("Erro na chamada cURL (sales): " . $curlError, E_USER_ERROR);
+        return null;
+    }
+
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    if ($httpCode == 200) {
+        return json_decode($response, true);
+    } else {
+        error_log("Erro ao buscar vendas. Código $httpCode: $response");
+        return null;
+    }
+}
 ?>
