@@ -76,17 +76,17 @@ $productCustomData = [
     // Você pode ver os IDs no JSON que a Hotmart retorna (ex: 6115722, 5971653, etc.)
     6115722 => [ // Exemplo: Checklist Profissional para o Tatuador
         'imagem' => '/img/Capa_Checklist.png', // URL da sua imagem
-        'link'   => 'https://pay.hotmart.com/SEUID12345C', // Seu link de checkout específico ou página de vendas
+        'link'   => 'product-checklist-profissional.html', // Seu link de checkout específico ou página de vendas
         'descricao_custom' => 'Um guia completo para otimizar seu estúdio e processos.' // Descrição personalizada (opcional)
     ],
     5971653 => [ // Exemplo: Conteúdo Premium para Tatuadores Atraindo Clientes...
         'imagem' => '/img/Capa_Atraindo_Clientes_Pagam.png',
-        'link'   => 'https://pay.hotmart.com/SEUID67890C',
+        'link'   => 'product-conteudo-premium.html',
         'descricao_custom' => 'Estratégias avançadas para atrair clientes que valorizam seu trabalho.'
     ],
     6031246 => [ // Exemplo: Kit de Scripts para WhatsApp
         'imagem' => '/img/Capa_Kit_Scripts.png',
-        'link'   => 'https://pay.hotmart.com/SEUID11223C',
+        'link'   => 'product-scripts-whatsapp.html',
         'descricao_custom' => 'Scripts prontos para engajar e converter clientes no WhatsApp.'
     ],
     5965235 => [ // Exemplo: Metodo de Agenda Cheia para Tatuadores + Bonus
@@ -96,8 +96,13 @@ $productCustomData = [
     ],
     6116134 => [ // Exemplo: Roteiro de atendimento encantador para Tatuadores
         'imagem' => '/img/Capa_Roteiro_Atendimento.png',
-        'link'   => 'https://pay.hotmart.com/SEUID77889C',
+        'link'   => 'product-roteiro-atendimento.html',
         'descricao_custom' => 'Domine a arte de um atendimento que encanta e fideliza clientes.'
+    ],
+    6155449 => [ // Exemplo: Roteiro de atendimento encantador para Tatuadores
+        'imagem' => '/img/Capa_cuidados_pos_tatoo.png', 
+        'link'   => 'product-cuidados-pos-tatuagem.html',
+        'descricao_custom' => 'Guia direto e prático, desde a primeira limpeza até aos cuidados a longo prazo.'
     ],
     // Adicione mais produtos aqui, seguindo o padrão
 ];

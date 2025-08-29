@@ -1,0 +1,236 @@
+/* --- RESET BÁSICO E VARIÁVEIS DE COR --- */
+:root {
+    --black: #0D0D0D;
+    --dark-gray: #1a1a1a;
+    --orange: #FF4500; /* Laranja Vívido */
+    --light-orange: #FF6347;
+    --white: #F5F5F5;
+    --text-gray: #B3B3B3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* --- ESTILOS GERAIS --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 3.5rem;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+}
+
+.highlight {
+    color: var(--orange);
+}
+
+/* --- BOTÃO DE CHAMADA PARA AÇÃO (CTA) --- */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(145deg, var(--orange), var(--light-orange));
+    color: var(--white);
+    padding: 20px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
+    border: none;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 69, 0, 0.6);
+}
+
+.cta-subtext {
+    display: block;
+    margin-top: 15px;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+/* --- SEÇÃO HERÓI --- */
+.hero {
+    background-color: var(--black);
+    background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('[https://placehold.co/1920x1080/000000/FFA500?text=Scripts+WhatsApp](https://placehold.co/1920x1080/000000/FFA500?text=Scripts+WhatsApp)');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+}
+
+.hero-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 5rem;
+    color: var(--orange);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    color: var(--white);
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+/* --- SEÇÃO CONTEÚDO DO KIT --- */
+.content {
+    background-color: var(--dark-gray);
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+
+.category-card {
+    background-color: var(--black);
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 5px solid var(--orange);
+}
+
+.category-card h3 {
+    color: var(--orange);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.category-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: var(--text-gray);
+}
+
+.script-example {
+    background-color: var(--dark-gray);
+    padding: 15px;
+    border-radius: 5px;
+    font-style: italic;
+    color: var(--white);
+    border-left: 3px solid var(--light-orange);
+}
+
+.more-content ul {
+    list-style-type: '✓ ';
+    padding-left: 20px;
+    color: var(--text-gray);
+}
+.more-content ul li {
+    margin-bottom: 10px;
+}
+
+/* --- SEÇÃO COMO USAR --- */
+.how-to-use {
+    background-color: var(--black);
+}
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 50px;
+}
+.step {
+    flex: 1;
+}
+.step-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 2rem;
+    font-family: 'Teko', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+}
+.step h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+/* --- SEÇÃO CTA FINAL --- */
+.final-cta {
+    background-color: var(--dark-gray);
+}
+.final-cta .section-title {
+    font-size: 3rem;
+}
+.guarantee {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--black);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.guarantee-seal {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid var(--orange);
+}
+.guarantee p {
+    margin: 0;
+    text-align: left;
+    color: var(--white);
+    font-size: 1rem;
+}
+
+/* --- RODAPÉ --- */
+footer {
+    background-color: var(--black);
+    padding: 30px 20px;
+    border-top: 1px solid var(--dark-gray);
+}
+footer p {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin-bottom: 5px;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .steps-container {
+        flex-direction: column;
+    }
+    .section-title { font-size: 2.8rem; }
+    .hero-title { font-size: 3.5rem; }
+}
