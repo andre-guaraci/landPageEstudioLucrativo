@@ -8,6 +8,8 @@
     --light-orange: #FF6347;
     --white: #F5F5F5;
     --text-gray: #B3B3B3;
+    --green:#00a651;
+    --light-green:#59dd38;
 }
 
 * {
@@ -54,7 +56,7 @@ p {
 /* --- BOTÃO DE CHAMADA PARA AÇÃO (CTA) --- */
 .cta-button {
     display: inline-block;
-    background: linear-gradient(145deg, var(--orange), var(--light-orange));
+    background: linear-gradient(145deg, var(--green), var(--light-green));
     color: var(--white);
     padding: 20px 40px;
     text-decoration: none;
@@ -102,6 +104,7 @@ p {
     max-width: 800px;
     margin-bottom: 40px;
 }
+
 /* --- SEÇÃO SOBRE O MENTOR --- */
 .about {
     background-color: var(--black);
@@ -128,15 +131,15 @@ p {
     color: var(--text-gray);
     margin-bottom: 20px;
     font-size: 1.1rem;
-    text-align: justify;
 }
 
 /* ESTILOS DA GALERIA CIRCULAR DO MENTOR */
 .mentor-gallery-circular {
     flex-basis: 40%; /* A galeria ocupa 40% */
     position: relative;
-    width: 400px; /* Tamanho base */
-    height: 400px;
+    max-width: 400px; /* Tamanho máximo */
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Garante que seja sempre um quadrado */
     margin: 0 auto;
 }
 
@@ -148,8 +151,8 @@ p {
 }
 
 .main-mentor-photo {
-    width: 380px;
-    height: 380px;
+    width: 75%; /* 280px de 400px */
+    height: 705;
     border: 5px solid var(--orange);
     top: 50%;
     left: 50%;
@@ -158,19 +161,18 @@ p {
 }
 
 .support-photo {
-    width: 100px;
-    height: 100px;
+    width: 30%; /* 100px de 400px */
+    height: 30%;
     border: 3px solid var(--orange);
     z-index: 1;
 }
 
 /* Posicionamento das fotos de suporte */
-.photo1 { top: -21%; left: 20%; }
-.photo2 { top: 2%; left: -10%; }
-.photo3 { top: 40%; left: -20%; }
-.photo4 { bottom: 0%; left: -10%; }
-.photo5 { bottom: -20%; right: 60%; }
-
+.photo1 { top: -20%; left: 35%; }
+.photo2 { top: -8%; left: 0%; }
+.photo3 { top: 35%; left: -20%; }
+.photo4 { bottom: -8%; left: 0%; }
+.photo5 { bottom: -20%; right: 35%; }
 
 /* --- RESPONSIVIDADE PARA A SECÇÃO DO MENTOR --- */
 @media (max-width: 900px) {
@@ -190,7 +192,6 @@ p {
 @media (max-width: 768px) {
     .about-text .section-title { font-size: 3.5rem; }
 }
-
 
 /* --- SEÇÃO SOBRE --- */
 .about {
