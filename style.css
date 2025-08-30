@@ -65,13 +65,13 @@ p {
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-transform: uppercase;
-    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
+    box-shadow: 0 5px 15px rgba(123, 238, 94, 0.4);
     border: none;
 }
 
 .cta-button:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(255, 69, 0, 0.6);
+    box-shadow: 0 8px 25px rgba(1, 250, 1, 0.589);
 }
 
 .cta-subtext {
@@ -193,7 +193,7 @@ p {
     .about-text .section-title { font-size: 3.5rem; }
 }
 
-/* --- SEÇÃO SOBRE --- */
+/* --- SEÇÃO SOBRE --- 
 .about {
     background-color: var(--dark-gray);
 }
@@ -214,6 +214,7 @@ p {
 .about-text p {
     max-width: 100%;
 }
+    */
 
 .products {
     background-color: var(--black);
