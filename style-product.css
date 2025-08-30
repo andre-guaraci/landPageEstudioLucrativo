@@ -81,12 +81,29 @@ body {
 
 /* --- SEÇÃO HERÓI --- */
 .hero {
-    background-color: var(--black);
-    background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('[https://placehold.co/1920x1080/000000/FFA500?text=Scripts+WhatsApp](https://placehold.co/1920x1080/000000/FFA500?text=Scripts+WhatsApp)');
+    background-color: var(--black);    
     background-size: cover;
     background-position: center;
     padding: 100px 20px;
+
 }
+/* --- IMAGENS DE FUNDO ESPECÍFICAS PARA CADA PRODUTO --- */
+.hero-scripts {
+    background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('/img/bg_scripts_whatsapp.png');
+}
+.hero-roteiro {
+    background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('/img/bg_roteiro_atendimento.png');
+}
+.hero-conteudo {
+    background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('/img/bg_conteudo_premium.png');
+}
+.hero-checklist {
+    background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('/img/bg_checklist_sucesso.png');
+}
+.hero-cuidados {
+    background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('/img/bg_cuidados_pos_tatuagem.png');
+}
+
 
 .hero-title {
     font-family: 'Teko', sans-serif;
