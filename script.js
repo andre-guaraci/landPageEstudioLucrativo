@@ -83,6 +83,13 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         });
     });
+// Inicialização do Google Analytics
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+// Configuração do Google Analytics
+    gtag('config', 'AW-10850040850');
 
 // Lógica para o Acordeão do FAQ
 
